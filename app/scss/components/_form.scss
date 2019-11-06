@@ -1,0 +1,25 @@
+/* ==========================================================================
+   #FORM
+   ========================================================================== */
+
+.form-control__wrapper {
+  position: relative;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 16px 24px;
+  border: 1px solid $border-color;
+  border-radius: 50px;
+  font-weight: 300;
+  font-size: inherit;
+  color: inherit;
+  box-shadow: none;
+  transition: border-color $ease-main;
+
+  &:focus {
+    outline: none;
+    border-color: $gray-light;
+  }
+}

@@ -1,0 +1,24 @@
+/* ==========================================================================
+   #BRAND
+   ========================================================================== */
+
+.brand__wrapper {
+  margin-right: auto;
+}
+
+.brand {
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  color: $text-color;
+
+  &:hover {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+.brand--header {
+  margin-right: 2rem;
+}

@@ -1,0 +1,51 @@
+// 
+//-- MIXINS
+// 
+
+@function em($pixels, $ref: 16) {
+  @return ($pixels / $ref) * 1em;
+}
+
+@function rem($pixels, $ref: 16) {
+  @return ($pixels / $ref) * 1rem;
+}
+
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin hover-underline {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin hover-border {
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease;
+
+  &:hover {
+    // border-color: $;
+  }
+}
+
+
+@mixin for-size($range) {
+
+  @if $range == phone-only {
+    @media (max-width: #{$phone-upper-boundary - 1}) { @content; }
+  } @else if $range == tablet-p-up {
+    @media (min-width: $phone-upper-boundary) { @content; }
+  } @else if $range == tablet-l-up {
+    @media (min-width: $tablet-portrait-upper-boundary) { @content; }
+  } @else if $range == desktop-up {
+    @media (min-width: $tablet-landscape-upper-boundary) { @content; }
+  } @else if $range == lg-desktop-up {
+    @media (min-width: $desktop-upper-boundary) { @content; }
+  }
+}

@@ -1,0 +1,26 @@
+//Breakpoints
+$phone-upper-boundary: 600px;
+$tablet-portrait-upper-boundary: 900px;
+$tablet-landscape-upper-boundary: 1200px;
+$desktop-upper-boundary: 1440px;
+
+// Colors
+$primary-color: #ff6464;
+$secondary-color: #ffefb6;
+$dark: #000;
+$gray: #353535;
+$gray-light: #7c7c7c;
+$text-color: $gray;
+$border-color: #e4e4e4;
+
+// Fonts
+$primary-font: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+//Easing
+$ease-main: 0.25s ease-in-out;
+
+$a: "phone-only";
+$b: "tablet-p-up";
+$c: "tablet-l-up";
+$d: "desktop-up";
+$e: "lg-desktop-up";
