@@ -5,7 +5,7 @@
 .hero {
   position: relative;
 
-  @include for-size(lg-desktop-up) {
+  @media (min-width: 1600px) {
     height: 100vh;
     padding-bottom: 5rem;
   }
@@ -32,18 +32,27 @@
 }
 
 .hero-img {
+  display: block;
   position: relative;
+
+  @include for-size(tablet-p-up) {
+    padding-top: 70px;
+  }
 }
 
 .hero-img__pic {
   position: relative;
-  left: -40px;
-  display: block;
-  margin-top: 70px;
-  width: 76%;
+  left: -14px;
+
+  @include for-size(phone-only) {
+    width: auto;
+    max-height: 475px;
+    object-fit: contain;
+  }
 
   @include for-size(tablet-p-up) {
-    width: 60%;
+    left: -40px;
+    width: 70%;
   }
 
   @include for-size(tablet-l-up) {
@@ -52,7 +61,6 @@
 
   @include for-size(desktop-up) {
     width: auto;
-    margin-top: 30px;
     left: -70px;
   }
 
@@ -85,7 +93,7 @@
   line-height: 1.16;
   text-transform: uppercase;
   
-  @include for-size(tablet-l-up) {
+  @include for-size(tablet-p-up) {
     font-size: rem(28);
   }
 
@@ -113,8 +121,8 @@
 
 .hero-title--secondary {
   position: absolute;
-  top: 16px;
-  left: 6%;
+  top: 86px;
+  left: 4.5%;
   z-index: 1;
 
   @include for-size(tablet-l-up) {
@@ -127,7 +135,7 @@
   width: 60px;
   margin-right: 16px;
 
-  @include for-size(desktop-up) {
+  @include for-size(tablet-p-up) {
     width: 80px;
   }
 
@@ -164,7 +172,7 @@
   justify-content: center;
   align-items: center;
 
-  @include for-size(desktop-up) {
+  @include for-size(tablet-l-up) {
     justify-content: flex-start;
   }
 }
@@ -230,7 +238,7 @@
 .hero__next-link {
   display: none;
 
-  @include for-size(lg-desktop-up) {
+  @media (min-width: 1600px) {
     display: block;
     position: absolute;
     bottom: 0;

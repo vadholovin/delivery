@@ -49,3 +49,58 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('.js-phone-mask').inputmask('+7 (999) 999-99-99');
 });
+
+
+/**
+ * Forms
+ */
+$(document).ready(function () {
+  $('.js-form').submit(function (e) { 
+    e.preventDefault();
+    var form = $(this);
+
+    var validator = form.validate({
+      rules: {
+        'form-client-name': {
+          required: true,
+          minlength: 3,
+          maxlength: 20,
+          lettersonly: true,
+        },
+        'form-client-phone': {
+          required: true,
+        },
+      },
+      messages: {
+        'form-client-name': {
+          required: 'Обязательное поле',
+          minlength: jQuery.validator.format('Слишком короткое имя'),
+          maxlength: jQuery.validator.format('Слишком длинное имя'),
+          lettersonly: jQuery.validator.format('Допускается только текст'),
+        },
+        'form-client-phone': {
+          required: 'Обязательное поле',
+        },
+      },
+    });
+
+    if(form.valid()) {
+      $.ajax({
+        url : 'post.php',
+        type: 'POST',
+        data: $(this).serialize(),
+      }).done(function(res) {
+        answer(res);
+      });
+    }
+
+    function answer(res) {
+      if (res === 'done') {
+        alert('Отправлено');
+      }
+      if (res === 'error') {
+        alert('Ошибка, попробуйте снова');
+      }
+    }
+  });
+});

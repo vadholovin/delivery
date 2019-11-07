@@ -249,6 +249,15 @@ textarea:focus::placeholder {
   flex-wrap: wrap;
 }
 
+.error {
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 0.875rem;
+  color: red;
+  text-align: center;
+}
+
 /* ==========================================================================
    #BASIC TYPOGRAPHY STYLES
    ========================================================================== */
@@ -453,6 +462,7 @@ body {
 
 .menu-mobile__link {
   font-weight: 500;
+  font-size: 1.5rem;
 }
 
 /* ==========================================================================
@@ -462,7 +472,7 @@ body {
   position: relative;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .hero {
     height: 100vh;
     padding-bottom: 5rem;
@@ -490,20 +500,34 @@ body {
 }
 
 .hero-img {
+  display: block;
   position: relative;
+}
+
+@media (min-width: 600px) {
+  .hero-img {
+    padding-top: 70px;
+  }
 }
 
 .hero-img__pic {
   position: relative;
-  left: -40px;
-  display: block;
-  margin-top: 70px;
-  width: 76%;
+  left: -14px;
+}
+
+@media (max-width: 599px) {
+  .hero-img__pic {
+    width: auto;
+    max-height: 475px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 @media (min-width: 600px) {
   .hero-img__pic {
-    width: 60%;
+    left: -40px;
+    width: 70%;
   }
 }
 
@@ -516,7 +540,6 @@ body {
 @media (min-width: 1200px) {
   .hero-img__pic {
     width: auto;
-    margin-top: 30px;
     left: -70px;
   }
 }
@@ -560,7 +583,7 @@ body {
   text-transform: uppercase;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .hero-title {
     font-size: 1.75rem;
   }
@@ -598,8 +621,8 @@ body {
 
 .hero-title--secondary {
   position: absolute;
-  top: 16px;
-  left: 6%;
+  top: 86px;
+  left: 4.5%;
   z-index: 1;
 }
 
@@ -616,7 +639,7 @@ body {
   margin-right: 16px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
   .hero-title__icon {
     width: 80px;
   }
@@ -665,7 +688,7 @@ body {
           align-items: center;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   .hero-form .flex-row {
     -webkit-box-pack: start;
             justify-content: flex-start;
@@ -745,7 +768,7 @@ body {
   display: none;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .hero__next-link {
     display: block;
     position: absolute;
@@ -1253,7 +1276,6 @@ a.faq-contact {
 
 @media (min-width: 1200px) {
   a.faq-contact {
-    padding: 14px 40px;
     font-size: 1.5rem;
   }
 }
@@ -1381,10 +1403,10 @@ a.faq-contact {
 .carousel-nav__btn {
   position: absolute;
   top: 98px;
-  left: 40px;
+  left: 30px;
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   border: 0;
   box-shadow: none;
@@ -1409,7 +1431,7 @@ a.faq-contact {
 
 .carousel-nav__btn-next {
   left: auto;
-  right: 40px;
+  right: 30px;
 }
 
 .carousel-nav__btn .icon {

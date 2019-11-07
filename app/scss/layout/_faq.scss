@@ -140,7 +140,6 @@ a.faq-contact {
   }
 
   @include for-size(desktop-up) {
-    padding: 14px 40px;
     font-size: rem(24);
   }
 }

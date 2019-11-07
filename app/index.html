@@ -8,7 +8,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="libs/aos/aos.css">
   <link rel="stylesheet" href="libs/slick/slick.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -112,7 +111,10 @@
                   </span>
                 </h2>
 
-                <img class="hero-img__pic" src="img/hero-img.png" alt="">
+                <picture>
+                  <source srcset="img/hero-img-mobile.png" media="(max-width: 600px)">
+                  <img class="hero-img__pic" src="img/hero-img.png" width="610" alt="">
+                </picture>
               </figure>
             </div>
 
@@ -137,19 +139,19 @@
                   Меня зовут Владислав Каткаев, и я собрал профессиональную команду курьеров, чтобы Вы не волновались за своё отправление!
                 </p>
   
-                <form action="post" class="form hero-form" id="formHero">
+                <form action="post" class="form hero-form js-form" id="formHero">
                   <div class="flex-row">
                     <div class="form__fields">
                       <div class="form__group">
                         <label for="hero-client-name" class="visuallyhidden">Имя</label>
                         <div class="form-control__wrapper">
-                          <input type="text" class="form-control" name="hero-client-name" id="hero-client-name" placeholder="Имя">
+                          <input type="text" class="form-control" name="form-client-name" id="hero-client-name" placeholder="Имя">
                         </div>
                       </div>
                       <div class="form__group">
                         <label for="hero-client-phone" class="visuallyhidden">Телефон</label>
                         <div class="form-control__wrapper">
-                          <input type="tel" class="form-control js-phone-mask" name="hero-client-phone" id="hero-client-phone" placeholder="Телефон">
+                          <input type="tel" class="form-control js-phone-mask" name="form-client-phone" id="hero-client-phone" placeholder="Телефон">
                         </div>
                       </div>
                     </div>
@@ -294,18 +296,18 @@
             </div>
           </div><!-- .flex-row--price end -->
 
-          <form action="post" class="form price-form" id="formPrice">
+          <form action="post" class="form price-form js-form" id="formPrice">
             <div class="flex-row">
               <div class="form__group">
                 <label for="price-client-name" class="visuallyhidden">Имя</label>
                 <div class="form-control__wrapper">
-                  <input type="text" class="form-control" name="price-client-name" id="price-client-name" placeholder="Имя">
+                  <input type="text" class="form-control" name="form-client-name" id="price-client-name" placeholder="Имя">
                 </div>
               </div>
               <div class="form__group">
                 <label for="price-client-phone" class="visuallyhidden">Телефон</label>
                 <div class="form-control__wrapper">
-                  <input type="tel" class="form-control js-phone-mask" name="price-client-phone" id="price-client-phone" placeholder="Телефон">
+                  <input type="tel" class="form-control js-phone-mask" name="form-client-phone" id="price-client-phone" placeholder="Телефон">
                 </div>
               </div>
               <button type="submit" class="button button--primary">
@@ -335,7 +337,7 @@
             </li>
             <li class="faq-list__item faq-list__item--answer">
               <div class="faq-list__text">
-                <p>Главная гарантия – это наша репутация. Более 1000 отзывов на <a href="#">«Юду»</a> . Также курьер может 
+                <p>Главная гарантия – это наша репутация. Более 1000 отзывов на <a href="#" target="_blank" rel="noopener">«Юду»</a> . Также курьер может 
                     написать расписку о материальной ответственности. 
                     Если у Вас есть ещё какие-то способы обезопасить себя от потери, то мы готовы 
                     пойти навстречу!</p>
@@ -494,17 +496,17 @@
           <div class="flex-row contacts-row">
             <div class="contacts-col contacts-col--left">
               <h3 class="contacts-subheading">Оставьте заявку</h3>
-              <form action="post" class="form contacts-form" id="formContacts">
+              <form action="post" class="form contacts-form js-form" id="formContacts">
                 <div class="form__group">
                   <label for="contacts-client-name" class="visuallyhidden">Имя</label>
                   <div class="form-control__wrapper">
-                    <input type="text" class="form-control" name="contacts-client-name" id="contacts-client-name" placeholder="Имя">
+                    <input type="text" class="form-control" name="form-client-name" id="contacts-client-name" placeholder="Имя">
                   </div>
                 </div>
                 <div class="form__group">
                   <label for="contacts-client-phone" class="visuallyhidden">Телефон</label>
                   <div class="form-control__wrapper">
-                    <input type="tel" class="form-control js-phone-mask" name="contacts-client-phone" id="contacts-client-phone" placeholder="Телефон">
+                    <input type="tel" class="form-control js-phone-mask" name="form-client-phone" id="contacts-client-phone" placeholder="Телефон">
                   </div>
                 </div>
                 <button type="submit" class="button button--primary">
@@ -578,10 +580,11 @@
 
   <!-- Scripts -->
   <script src="js/vendor/jquery-3.3.1.min.js"></script>
-  <script src="libs/aos/aos.js"></script>
   <script src="libs/slick/slick.min.js"></script>
   <script src="libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
   <script src="libs/inputmask/jquery.inputmask.min.js"></script>
+  <script src="libs/jquery-validate/jquery.validate.min.js"></script>
+  <script src="libs/jquery-validate/lettersonly.js"></script>
   <script src="js/main.js"></script>
 
 </body>

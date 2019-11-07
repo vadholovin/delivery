@@ -121,3 +121,12 @@ textarea:focus::placeholder {
   display: flex;
   flex-wrap: wrap;
 }
+
+.error {
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: rem(14);
+  color: red;
+  text-align: center;
+}
