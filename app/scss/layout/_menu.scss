@@ -43,3 +43,63 @@
 .menu-primary__link:hover::after {
   width: 100%;
 }
+
+
+/* #MOBILE-NAV
+   ========================================================================== */
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  text-align: center;
+}
+
+.mobile-nav.is-open {
+  display: block;
+  background-color: rgba(#fff, 0.95);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.mobile-nav .container {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all $ease-main;
+}
+
+.mobile-nav.is-open .container {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  transform: translateY(0%);
+}
+
+.menu-mobile {
+  padding-top: 2.5rem;
+}
+
+.menu-mobile__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.menu-mobile__link {
+  font-weight: 500;
+}

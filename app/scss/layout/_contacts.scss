@@ -1,0 +1,87 @@
+/* ==========================================================================
+   #CONTACTS
+   ========================================================================== */
+
+.contacts {
+  padding-top: 130px;
+  padding-bottom: 3rem;
+
+  @include for-size(lg-desktop-up) {
+    padding-top: 206px;
+  }
+}
+
+.contacts-col {
+  width: 100%;
+}
+
+.contacts-col--left {
+
+  @include for-size(tablet-l-up) {
+    width: 35.923%;
+    padding-left: 24px;
+    padding-right: 44px;
+  }
+}
+
+.contacts-col--right {
+  order: -1;
+
+  @include for-size(tablet-l-up) {
+    order: 0;
+    width: 64.077%;
+  }
+}
+
+.contacts-subheading {
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+  font-weight: bold;
+  font-size: rem(24);
+  text-align: center;
+  color: $dark;
+
+  @include for-size(tablet-l-up) {
+    margin-bottom: 38px;
+    padding-top: 106px;
+  }
+}
+
+.contacts-form {
+  width: 100%;
+  max-width: 398px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 66px;
+}
+
+.contacts-form .form__group {
+  margin-bottom: 1rem;
+
+  @include for-size(tablet-l-up) {
+    margin-bottom: 34px;
+  }
+}
+
+.contacts-form .button {
+  width: 100%;
+}
+
+.contacts__bottom {
+  text-align: center;
+
+  @include for-size(tablet-l-up) {
+    text-align: left;
+  }
+}
+
+.contacts__phone {
+  display: block;
+  margin-bottom: 2.25rem;
+  font-weight: bold;
+  font-size: rem(24);
+
+  @include for-size(tablet-l-up) {
+    tmargin-bottom: 58px;
+  }
+}

@@ -3,5 +3,150 @@
    ========================================================================== */
 
 .price {
-  padding-top: 120px;
+  padding-top: 1rem;
+
+  @include for-size(tablet-l-up) {
+    padding-top: 2.5rem;
+  }
+
+  @include for-size(desktop-up) {
+    padding-top: 5rem;
+  }
+
+  @include for-size(lg-desktop-up) {
+    padding-top: 7.5rem;
+  }
+}
+
+.price-row {
+  margin-bottom: rem(72);
+
+  @include for-size(tablet-l-up) {
+    flex-wrap: nowrap;
+  }
+
+  @include for-size(desktop-up) {
+    margin-bottom: rem(90);
+  }
+}
+
+.price-col {
+  width: 100%;
+}
+
+.price-col--left {
+  flex-grow: 1;
+  padding-left: 8px;
+  text-align: center;
+}
+
+.price-col--right {
+
+  @include for-size(tablet-l-up) {
+    flex: none;
+    max-width: 360px;
+  }
+
+  @include for-size(desktop-up) {
+    max-width: 416px;
+  }
+
+  @include for-size(lg-desktop-up) {
+    max-width: 450px;
+  }
+}
+
+.price-list {
+  margin-top: 3rem;
+
+  @include for-size(tablet-l-up) {
+    margin-top: 0.75rem;
+  }
+}
+
+.price-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 416px;
+  min-height: 126px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  padding: 12px 36px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+  transition: box-shadow $ease-main;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include for-size(tablet-l-up) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @include for-size(desktop-up) {
+    min-height: 174px;
+    padding: 24px 36px 24px 56px;
+  }
+}
+
+.price-list__item:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.price-list__text {
+  color: $dark;
+  line-height: 1.2;
+
+  @include for-size(desktop-up) {
+    font-size: rem(24);
+  }
+}
+
+.price-list__cost {
+  margin-top: 0.25rem;
+  font-size: rem(32);
+  line-height: 1.15;
+  color: $primary-color;
+
+  @include for-size(desktop-up) {
+    margin-top: 0.75rem;
+    font-size: rem(28);
+  }
+
+  small {
+    font-size: 60%;
+  }
+}
+
+.price-form .flex-row {
+  justify-content: center;
+  align-items: center;
+  margin-left: -22px;
+  margin-right: -22px;
+}
+
+.price-form .form__group {
+  width: 100%;
+  max-width: 398px;
+  margin-left: 22px;
+  margin-right: 22px;
+  margin-bottom: 10px;
+}
+
+.price-form .button {
+  width: 100%;
+  max-width: 398px;
+  margin-left: 22px;
+  margin-right: 22px;
+  margin-bottom: 10px;
+
+  @include for-size(desktop-up) {
+    max-width: 300px;
+  }
 }

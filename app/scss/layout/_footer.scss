@@ -10,4 +10,8 @@
 
 .footer__rights {
   text-align: center;
+
+  @include for-size(phone-only) {
+    font-size: rem(14);
+  }
 }

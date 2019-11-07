@@ -1,0 +1,67 @@
+/* ==========================================================================
+   #LABELED-ROW
+   ========================================================================== */
+
+.labeled-row {
+  font-weight: 300;
+  color: $dark;
+}
+
+.labeled-row__label,
+.labeled-row__link {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+
+  @include for-size(phone-only) {
+    display: block;
+  }
+}
+
+.labeled-row__label {
+  margin-right: 48px;
+
+  @include for-size(phone-only) {
+    margin-right: 0;
+  }
+}
+
+.labeled-row__link {
+  text-decoration: underline;
+}
+
+.labeled-row--reviews-slide {
+  font-size: rem(14);
+  color: $gray-light;
+
+  @include for-size(tablet-l-up) {
+    font-size: rem(20);
+  }
+}
+
+.labeled-row--reviews {
+  text-align: center;
+
+  @include for-size(tablet-l-up) {
+    text-align: left;
+    margin-left: 6.46%;
+  }
+
+  .labeled-row__label {
+    font-size: rem(14);
+
+    @include for-size(tablet-l-up) {
+      font-size: rem(20);
+    }
+  }
+}
+
+.labeled-row--contacts {
+
+  .labeled-row__label {
+    margin-bottom: 1.75rem;
+
+    @include for-size(tablet-l-up) {
+      margin-bottom: 0.25rem;
+    }
+  }
+}

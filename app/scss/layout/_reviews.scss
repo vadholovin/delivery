@@ -1,0 +1,140 @@
+/* ==========================================================================
+   #REVIEWS
+   ========================================================================== */
+
+.reviews {
+  padding-top: 114px;
+
+  @include for-size(desktop-up) {
+    padding-top: 150px;
+  }
+}
+
+.reviews-carousel__wrapper {
+  position: relative;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: 2.5rem;
+
+  @include for-size(tablet-l-up) {
+    margin-bottom: 4.5rem;
+  }
+}
+.reviews-carousel__cell {
+  width: 100%;
+  padding: 8px 16px 16px 16px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.reviews-slide {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 36px 16px 34px 16px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+
+  @include for-size(tablet-l-up) {
+    padding: 52px 102px 58px 102px;
+  }
+}
+
+.reviews-slide__img {
+  flex: none;
+  position: relative;
+  width: 147px;
+  height: 147px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @include for-size(tablet-l-up) {
+    width: 171px;
+    height: 171px;
+    margin-bottom: 0;
+  }
+}
+
+.reviews-slide__img img {
+  @include vertical-center;
+
+  width: 100%;
+}
+
+.reviews-slide__body {
+  width: 100%;
+  color: $dark;
+  text-align: center;
+
+  @include for-size(tablet-l-up) {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding-left: 5%;
+    text-align: left;
+  }
+}
+
+.reviews-slide__heading {
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+
+  @include for-size(tablet-l-up) {
+    font-size: rem(24);
+  }
+}
+
+.reviews-slide__text {
+  margin-bottom: 1.25rem;
+  font-size: rem(14);
+
+  @include for-size(tablet-l-up) {
+    margin-bottom: 44px;
+    font-size: rem(20);
+  }
+}
+
+.carousel-nav__btn {
+  position: absolute;
+  top: 98px;
+  left: 40px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+
+    .icon {
+      opacity: 0.5;
+    }
+  }
+
+  @include for-size(tablet-l-up) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+.carousel-nav__btn-next {
+  left: auto;
+  right: 40px;
+}
+
+.carousel-nav__btn .icon {
+  @include vertical-center;
+}
+
+.reviews-bottom__label,
+.reviews-bottom__link {
+  display: inline-block;
+  font-weight: 300;
+}

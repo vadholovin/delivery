@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="stylesheet" href="libs/aos/aos.css">
+  <link rel="stylesheet" href="libs/slick/slick.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -49,7 +51,39 @@
                 <a href="#contacts" class="menu-primary__link">Контакты</a>
               </li>
             </ul>
+
+            <button class="hamburger hamburger--spring" type='button' aria-label='Меню' aria-controls='navigation'
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
           </nav>
+        </div>
+      </div>
+
+      <div class="mobile-nav">
+        <div class="container">
+          <ul class="menu-mobile">
+            <li class="menu-mobile__item">
+              <a href="#hero" class="menu-mobile__link">Главная</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#benefits" class="menu-mobile__link">Преимущества</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#price" class="menu-mobile__link">Стоимость услуг</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#faq" class="menu-mobile__link">FAQ</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#reviews" class="menu-mobile__link">Отзывы</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#contacts" class="menu-mobile__link">Контакты</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -59,23 +93,26 @@
       <!-- .hero start -->
       <section class="hero" id="hero">
         <div class="container">
-          <h2 class="hero-title hero-title--secondary">
-            <span class="hero-title__icon">
-              <svg class="icon icon-clock">
-                <use xlink:href="#clock"></use>
-              </svg>
-            </span>
-            <span class="hero-title__text">
-              курьерская доставка
-              <br>
-              день в день
-            </span>
-          </h2>
-
           <div class="flex-row hero-row">
             <div class="hero-col hero-col--left">
               <figure class="hero-img">
-                <img src="img/hero-img.png" alt="">
+                <h2 class="hero-title hero-title--secondary">
+                  <span class="hero-title__icon">
+                    <img src="img/icons/clock.png"
+                      srcset="img/icons/clock.png 1x,
+                              img/icons/clock@2x.png 1.5x,
+                              img/icons/clock@2x.png 2x,
+                              img/icons/clock@2x.png 3x"
+                      width="100" alt="">
+                  </span>
+                  <span class="hero-title__text">
+                    курьерская доставка
+                    <br>
+                    день в день
+                  </span>
+                </h2>
+
+                <img class="hero-img__pic" src="img/hero-img.png" alt="">
               </figure>
             </div>
 
@@ -112,7 +149,7 @@
                       <div class="form__group">
                         <label for="hero-client-phone" class="visuallyhidden">Телефон</label>
                         <div class="form-control__wrapper">
-                          <input type="text" class="form-control" name="hero-client-phone" id="hero-client-phone" placeholder="Телефон">
+                          <input type="tel" class="form-control js-phone-mask" name="hero-client-phone" id="hero-client-phone" placeholder="Телефон">
                         </div>
                       </div>
                     </div>
@@ -129,6 +166,8 @@
           </div>
         </div>
 
+        <img class="hero__pic" src="img/spots.png" alt="">
+
         <a href="#benefits" class="hero__next-link" role="button" aria-label="К следущей секции">
           <svg class="icon icon-chevron-down">
             <use xlink:href="#chevron-down"></use>
@@ -138,72 +177,78 @@
       <!-- .hero end -->
 
       <!-- .benefits start -->
-      <section class="benefits" id="benefits">
+      <section class="benefits">
         <div class="container">
-          <h2 class="title title--benefits">Почему с нами выгодно?</h2>
+          <h2 class="title title--benefits" id="benefits">Почему работать с нами выгодно?</h2>
 
-          <ul class="benefits-list">
-            <li class="benefits-list__item">
-              <div class="benefits-list__heading">Удобно.</div>
-              <div class="benefits-list__icon benefits-list__icon--boy">
-                <img src="img/boy.png"
-                  srcset="img/boy.png 1x,
-                          img/boy@2x.png 1.5x,
-                          img/boy@2x.png 2x,
-                          img/boy@2x.png 3x"
-                  alt="">
+          <div class="benefits-list">
+            <div class="benefits-list__item">
+              <div class="benefits-list__content">
+                <div class="benefits-list__heading">Удобно.</div>
+                <div class="benefits-list__icon benefits-list__icon--boy">
+                  <img src="img/boy.png"
+                    srcset="img/boy.png 1x,
+                            img/boy@2x.png 1.5x,
+                            img/boy@2x.png 2x,
+                            img/boy@2x.png 3x"
+                    alt="">
+                </div>
+                <p class="benefits-list__text">
+                  Все курьеры – граждане РФ
+                  <br>
+                  с родным русским языком
+                </p>
               </div>
-              <p class="benefits-list__text">
-                Все курьеры – граждане РФ
-                <br>
-                с родным русским языком
-              </p>
-            </li>
-            <li class="benefits-list__item">
-              <div class="benefits-list__heading">Надёжно.</div>
-              <div class="benefits-list__icon benefits-list__icon--docs">
-                <img src="img/docs.png"
-                  srcset="img/docs.png 1x,
-                          img/docs@2x.png 1.5x,
-                          img/docs@2x.png 2x,
-                          img/docs@2x.png 3x"
-                  alt="">
+            </div>
+            <div class="benefits-list__item">
+              <div class="benefits-list__content">
+                <div class="benefits-list__heading">Надёжно.</div>
+                <div class="benefits-list__icon benefits-list__icon--docs">
+                  <img src="img/docs.png"
+                    srcset="img/docs.png 1x,
+                            img/docs@2x.png 1.5x,
+                            img/docs@2x.png 2x,
+                            img/docs@2x.png 3x"
+                    alt="">
+                </div>
+                <p class="benefits-list__text">
+                  Успешно доставляем заказы
+                  <br>
+                  уже на протяжении четырёх лет
+                </p>
               </div>
-              <p class="benefits-list__text">
-                Успешно доставляем заказы
-                <br>
-                уже на протяжении четырёх лет
-              </p>
-            </li>
-            <li class="benefits-list__item">
-              <div class="benefits-list__heading benefits-list__heading--smaller">Вариативно.</div>
-              <div class="benefits-list__icon benefits-list__icon--weight">
-                <img src="img/weight.png"
-                  srcset="img/weight.png 1x,
-                          img/weight@2x.png 1.5x,
-                          img/weight@2x.png 2x,
-                          img/weight@2x.png 3x"
-                  alt="">
+            </div>
+            <div class="benefits-list__item">
+              <div class="benefits-list__content">
+                <div class="benefits-list__heading benefits-list__heading--smaller">Вариативно.</div>
+                <div class="benefits-list__icon benefits-list__icon--weight">
+                  <img src="img/weight.png"
+                    srcset="img/weight.png 1x,
+                            img/weight@2x.png 1.5x,
+                            img/weight@2x.png 2x,
+                            img/weight@2x.png 3x"
+                    alt="">
+                </div>
+                <p class="benefits-list__text">
+                  Найдём, купим, сфотографируем
+                  <br>
+                  и выполним другую нестандартную
+                  <br>
+                  просьбу
+                </p>
               </div>
-              <p class="benefits-list__text">
-                Найдём, купим, сфотографируем
-                <br>
-                и выполним другую нестандартную
-                <br>
-                просьбу
-              </p>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </div>
+          </div><!-- .benefits-list end -->
       </section>
       <!-- .benefits end -->
 
       <!-- .price start -->
-      <section class="price" id="price">
+      <section class="price">
         <div class="container">
-          <h2 class="title title--price">Стоимость услуг</h2>
+          <h2 class="title title--price" id="price">Стоимость услуг</h2>
 
-          <div class="flex-row flex-row--price">
+          <div class="flex-row price-row">
             <div class="price-col price-col--left">
               <img src="img/courier.png"
                 srcset="img/courier.png 1x,
@@ -215,29 +260,35 @@
             <div class="price-col price-col--right">
               <ul class="price-list">
                 <li class="price-list__item">
-                  <p class="price-list__text">
-                    Стоимость за одну дставку
-                    <br>
-                    в пределах МКАД:
-                  </p>
-                  <span class="price-list__cost"><small>от</small> 350 ₽</span>
+                  <div class="price-list__content">
+                    <p class="price-list__text">
+                      Стоимость за одну дставку
+                      <br>
+                      в пределах МКАД:
+                    </p>
+                    <p class="price-list__cost"><small>от</small> 350 ₽</p>
+                  </div>
                 </li>
                 <li class="price-list__item">
-                  <p class="price-list__text">
-                    Стоимость трёх и более
-                    <br>
-                    доставок в пределах МКАД:
-                  </p>
-                  <span class="price-list__cost"><small>от</small> 300 ₽</span>
+                  <div class="price-list__content">
+                    <p class="price-list__text">
+                      Стоимость трёх и более
+                      <br>
+                      доставок в пределах МКАД:
+                    </p>
+                    <p class="price-list__cost"><small>от</small> 300 ₽</p>
+                  </div>
                 </li>
                 <li class="price-list__item">
-                  <p class="price-list__text">
-                    Стоимость доставок
-                    <br>
-                    за МКАД обсуждается
-                    <br>
-                    индивидуально
-                  </p>
+                  <div class="price-list__content">
+                    <p class="price-list__text">
+                      Стоимость доставок
+                      <br>
+                      за МКАД обсуждается
+                      <br>
+                      индивидуально
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -254,7 +305,7 @@
               <div class="form__group">
                 <label for="price-client-phone" class="visuallyhidden">Телефон</label>
                 <div class="form-control__wrapper">
-                  <input type="text" class="form-control" name="price-client-phone" id="price-client-phone" placeholder="Телефон">
+                  <input type="tel" class="form-control js-phone-mask" name="price-client-phone" id="price-client-phone" placeholder="Телефон">
                 </div>
               </div>
               <button type="submit" class="button button--primary">
@@ -267,9 +318,9 @@
       <!-- .price end -->
 
       <!-- .faq start -->
-      <section class="faq" id="faq">
+      <section class="faq">
         <div class="container">
-          <h2 class="title title--faq">Частые вопросы</h2>
+          <h2 class="title title--faq" id="faq">Частые вопросы</h2>
           <ul class="faq-list">
             <li class="faq-list__item faq-list__item--question">
               <span class="faq-list__icon">
@@ -284,7 +335,7 @@
             </li>
             <li class="faq-list__item faq-list__item--answer">
               <div class="faq-list__text">
-                <p>Главная гарантия – это наша репутация. Более 1000 отзывов на «Юду» . Также курьер может 
+                <p>Главная гарантия – это наша репутация. Более 1000 отзывов на <a href="#">«Юду»</a> . Также курьер может 
                     написать расписку о материальной ответственности. 
                     Если у Вас есть ещё какие-то способы обезопасить себя от потери, то мы готовы 
                     пойти навстречу!</p>
@@ -357,7 +408,7 @@
             </li>
             <li class="faq-list__item faq-list__item--answer">
               <div class="faq-list__text">
-                <p>Если у Вас остались еще вопросы звоните, будем рады помочь  <b><a href="tel:+79776884770">+7 977 688-47-70</a></b></p>
+                <p>Если у Вас остались еще вопросы звоните, будем рады помочь <a href="tel:+79776884770" class="faq-contact">+7 977 688-47-70</a></p>
               </div>
 
               <span class="faq-list__icon">
@@ -372,9 +423,9 @@
       <!-- .faq end -->
 
       <!-- .reviews start -->
-      <section class="reviews" id="reviews">
+      <section class="reviews">
         <div class="container">
-          <h2 class="title title--reviews">Отзывы о нас</h2>
+          <h2 class="title title--reviews" id="reviews">Отзывы о нас</h2>
 
           <div class="reviews-carousel__wrapper">
             <div class="reviews-carousel js-reviews-carousel">
@@ -387,9 +438,9 @@
                   <div class="reviews-slide__body">
                     <h3 class="reviews-slide__heading">Георгий Ш</h3>
                     <p class="reviews-slide__text">Все как всегда замечательно, привезли все в целости и сохранности, очень рад очередному сотрудничеству. Буду обращаться снова, спасибо)</p>
-                    <div class="reviews-slide__source">
-                      <span class="reviews-slide__source-label">Отзыв оставлен с сайта Юду</span>
-                      <a href="#" class="reviews-slide__source-link">youdo.com</a>
+                    <div class="labeled-row labeled-row--reviews-slide">
+                      <span class="labeled-row__label">Отзыв оставлен с сайта Юду</span>
+                      <a href="#" class="labeled-row__link" target="_blank" rel="noopener">Перейти к источнику</a>
                     </div>
                   </div>
                 </div>
@@ -398,75 +449,75 @@
               <div class="reviews-carousel__cell">
                 <div class="reviews-slide">
                   <figure class="reviews-slide__img">
-                    <img src="img/reviewers/reviewer-1.jpg" alt="">
+                    <img src="http://www.next-level-agency.com/userfiles/images/cat_med/20171212011919_2459665.jpg" alt="">
                   </figure>
 
                   <div class="reviews-slide__body">
                     <h3 class="reviews-slide__heading">Георгий Ш</h3>
                     <p class="reviews-slide__text">Все как всегда замечательно, привезли все в целости и сохранности, очень рад очередному сотрудничеству. Буду обращаться снова, спасибо)</p>
-                    <div class="reviews-slide__source">
-                      <span class="reviews-slide__source-label">Отзыв оставлен с сайта Юду</span>
-                      <a href="#" class="reviews-slide__source-link">youdo.com</a>
+                    <div class="labeled-row labeled-row--reviews-slide">
+                      <span class="labeled-row__label">Отзыв оставлен с сайта Юду</span>
+                      <a href="#" class="labeled-row__link" target="_blank" rel="noopener">Перейти к источнику</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="reviews-carousel__nav carousel-nav">
+            <div class="reviews-carousel__nav carousel-nav" id="reviews-carousel-nav">
               <button class="carousel-nav__btn carousel-nav__btn-prev" aria-label="Предыдущий слайд">
-                <svg class="icon">
+                <svg class="icon icon-chevron-left">
                   <use xlink:href="#chevron-left"></use>
                 </svg>
               </button>
               <button class="carousel-nav__btn carousel-nav__btn-next" aria-label="Следующий слайд">
-                <svg class="icon">
+                <svg class="icon icon-chevron-right">
                   <use xlink:href="#chevron-right"></use>
                 </svg>
               </button>
             </div>
           </div>
 
-          <div class="reviews-bottom">
-            <span class="reviews-bottom__label">Посмотреть все отзывы на сайте</span>
-            <a href="#" class="reviews-bottom__link">youdo.com</a>
+          <div class="labeled-row labeled-row--reviews">
+            <span class="labeled-row__label">Посмотреть все отзывы на сайте</span>
+            <a href="#" class="labeled-row__link" target="_blank" rel="noopener">youdo.com</a>
           </div>
         </div>
       </section>
       <!-- .reviews end -->
 
       <!-- .contacts start -->
-      <section class="contacts" id="contacts">
+      <section class="contacts">
         <div class="container">
-          <h2 class="title title--contacts">Контакты</h2>
+          <h2 class="title title--contacts" id="contacts">Контакты</h2>
 
-          <div class="contacts-row">
+          <div class="flex-row contacts-row">
             <div class="contacts-col contacts-col--left">
               <h3 class="contacts-subheading">Оставьте заявку</h3>
               <form action="post" class="form contacts-form" id="formContacts">
-                <div class="flex-row">
-                  <div class="form__group">
-                    <label for="contacts-client-name" class="visuallyhidden">Имя</label>
-                    <div class="form-control__wrapper">
-                      <input type="text" class="form-control" name="contacts-client-name" id="contacts-client-name" placeholder="Имя">
-                    </div>
+                <div class="form__group">
+                  <label for="contacts-client-name" class="visuallyhidden">Имя</label>
+                  <div class="form-control__wrapper">
+                    <input type="text" class="form-control" name="contacts-client-name" id="contacts-client-name" placeholder="Имя">
                   </div>
-                  <div class="form__group">
-                    <label for="contacts-client-phone" class="visuallyhidden">Телефон</label>
-                    <div class="form-control__wrapper">
-                      <input type="text" class="form-control" name="contacts-client-phone" id="contacts-client-phone" placeholder="Телефон">
-                    </div>
-                  </div>
-                  <button type="submit" class="button button--primary">
-                    Заказать доставку
-                  </button>
                 </div>
+                <div class="form__group">
+                  <label for="contacts-client-phone" class="visuallyhidden">Телефон</label>
+                  <div class="form-control__wrapper">
+                    <input type="tel" class="form-control js-phone-mask" name="contacts-client-phone" id="contacts-client-phone" placeholder="Телефон">
+                  </div>
+                </div>
+                <button type="submit" class="button button--primary">
+                  Заказать доставку
+                </button>
               </form>
 
-              <a href="tel:+79776884770" class="contacts__phone">+7 977 688-47-70</a>
-              <div class="contacts-bottom">
-                <span class="contacts-bottom__label">Профиль на:</span>
-                <a href="#" class="contacts-bottom__link">youdo.com</a>
+              <div class="contacts__bottom">
+                <a href="tel:+79776884770" class="contacts__phone">+7 977 688-47-70</a>
+                <div class="labeled-row labeled-row--contacts">
+                  <span class="labeled-row__label">Профиль на:</span>
+                  <a href="#" class="labeled-row__link" target="_blank" rel="noopener">youdo.com</a>
+                </div>
               </div>
             </div><!-- .contacts-col--left end -->
 
@@ -527,6 +578,10 @@
 
   <!-- Scripts -->
   <script src="js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="libs/aos/aos.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+  <script src="libs/inputmask/jquery.inputmask.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>
