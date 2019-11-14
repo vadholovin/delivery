@@ -16,3 +16,27 @@
   height: 70px;
   align-items: center;
 }
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__phone {
+  display: none;
+
+  @media (min-width: 375px) {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: rem(15);
+    line-height: 1.15;
+    color: $text-color;
+    white-space: nowrap;
+  }
+
+  @include for-size(desktop-up) {
+    margin-left: 40px;
+    margin-top: 0;
+  }
+}

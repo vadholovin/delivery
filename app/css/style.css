@@ -354,6 +354,36 @@ body {
           align-items: center;
 }
 
+.header-nav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.header__phone {
+  display: none;
+}
+
+@media (min-width: 375px) {
+  .header__phone {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 0.9375rem;
+    line-height: 1.15;
+    color: #353535;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__phone {
+    margin-left: 40px;
+    margin-top: 0;
+  }
+}
+
 /* ==========================================================================
    #MENU
    ========================================================================== */
@@ -369,7 +399,7 @@ body {
 }
 
 .menu-primary__item {
-  margin-right: 6vw;
+  margin-right: 36px;
 }
 
 .menu-primary__item:last-child {
@@ -465,6 +495,25 @@ body {
   font-size: 1.5rem;
 }
 
+.mobile-nav__phone {
+  position: relative;
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.mobile-nav__phone::before {
+  content: '';
+  display: block;
+  width: 160px;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid #999;
+}
+
 /* ==========================================================================
    #HERO
    ========================================================================== */
@@ -475,6 +524,7 @@ body {
 @media (min-width: 1600px) {
   .hero {
     height: 100vh;
+    max-height: 900px;
     padding-bottom: 5rem;
   }
 }
@@ -1670,7 +1720,7 @@ a.faq-contact {
 }
 
 .brand--header {
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 }
 
 /* ==========================================================================
@@ -2044,6 +2094,8 @@ a.faq-contact {
   line-height: 1;
   outline: none;
   cursor: pointer;
+  margin-top: 8px;
+  margin-left: 24px;
   padding-left: 2px;
   padding-right: 2px;
 }
